@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Ingressos </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem vindo ao Venda de Ingressos</h1>
+    </header>
+
+    <div> <!-- Div principal que engloba toda a página -->
+        <div> 
+            <h2>Identificação</h2>
+            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF aqui"></input>
+        </div>
+        <div>
+            <h2>Turno</h2>
+            <select id="turno" name="turno">
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+        </div>
+        <div>
+            <h2>Área</h2>
+            <div>
+                <label>
+                    <input type="checkbox" name="ingresso" value="plateiaA">Plateia A - R$ 50,00
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="ingresso" value="plateiaB">Plateia B - R$ 70,00
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="ingresso" value="camarote"> Camarote - R$ 100,00
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="ingresso" value="friza"> Friza - R$ 150,00
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="ingresso" value="nobreza"> Nobreza - R$ 310,00
+                </label>
+            </div>
+        </div>
+        <div>
+            <h2>Quantidade</h2>
+            <input type="number" id="quantidade" name="quantidade" min="1" value="1" placeholder="Quantidade de ingressos">
+        </div>
+        <button onclick="gerarComprovante()">Gerar Comprovante</button>
+    </div>
+    <div id="comprovante" class="comprovante">
+        <h3>COMPROVANTE DE INGRESSO</h3>
+        <!-- Informações do comprovante -->
+        <div class="info-comprovante">
+            <strong>CPF:</strong> <span id="cpf-comprovante">-</span>
+        </div>
+        <div class="info-comprovante">
+            <strong>Turno:</strong> <span id="turno-comprovante">-</span>
+        </div>
+        <div class="info-comprovante">
+            <strong>Ingressos Selecionados:</strong>
+        </div>
+        <div id="ingressos-comprovante"></div>
+        
+        <!-- Total de ingressos -->
+        <div class="total">
+            <strong>Total: R$ <span id="total-comprovante">0,00</span></strong>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="window.print()">Imprimir Comprovante</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Venda de Ingressos</p>
+    </footer>
+
+    <script src="script.js"></script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="comprovante" class="comprovante ativo">
+        
+        <h3>COMPROVANTE DE INGRESSO</h3>
+        <div class="info-comprovante">
+            <strong>CPF:</strong> <span id="cpf-comprovante">-</span>
+        </div>
+        <div class="info-comprovante">
+            <strong>Turno:</strong> <span id="turno-comprovante">-</span>
+        </div>
+        <div class="info-comprovante">
+            <strong>Ingressos Selecionados:</strong>
+        </div>
+        <div id="ingressos-comprovante"></div>
+        <div class="total">
+            <strong>Total: R$ <span id="total-comprovante">0,00</span></strong>
+        </div>
+        <button onclick="window.print()">Imprimir</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
